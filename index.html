@@ -6,6 +6,38 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        body{
+            background-color: hsl(0, 10%, 10%);
+            color: white;
+        }
+        textarea{
+            display: block;
+            width: 100%;
+            font-size: 30px;
+            background-color: transparent;
+        }
+        #ans{
+            position: fixed;
+            border-radius: 50px;
+            height: 500px;
+        }
+        #question{
+            position: fixed;
+            bottom: 0;
+            height:100px;
+        }
+        h1{
+            text-align: center;
+        }
+        textarea:hover{
+            background-color: white;
+        }
+    </style>
     <h1>AI multi lingual chat</h1>
+    <div id="body">
+    <textarea name="" id="ans" placeholder="HELLO I AM UR CHAT BOT" readonly ></textarea>
+    <textarea name="" id="question" placeholder="ask any question"></textarea>
+</div>
 </body>
 </html>
