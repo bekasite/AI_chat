@@ -12,33 +12,55 @@
             color: white;
         }
         textarea{
+            
             display: block;
             width: 100%;
             font-size: 30px;
             background-color: transparent;
+            color: white;
         }
         #ans{
+            padding-left: 20px;
             position: fixed;
             border-radius: 50px;
             height: 500px;
             cursor: pointer;
         }
-        #question{
+        #question,button{
             position: fixed;
             bottom: 0;
             height:100px;
         }
+        button{
+            right: 0;
+        }
         h1{
             text-align: center;
         }
-        textarea:hover{
+        #question:hover{
             background-color: white;
+            color: black;
         }
     </style>
     <h1>AI multi lingual chat</h1>
     <div id="body">
     <textarea name="" id="ans" placeholder="HELLO I AM UR CHAT BOT" readonly ></textarea>
-    <textarea name="" id="question" placeholder="ask any question"></textarea>
+    <textarea name="" id="question" placeholder="ask any question"></textarea><button onclick="a()">send</button>
 </div>
+<script>
+    function a(){
+        
+        let a=document.getElementById("question").value;
+        
+        if(a=="hello"){
+            
+           document.getElementById("ans").innerHTML = "hello how are u i am ur bot";
+        }
+        if(a=="fine how about u"){
+            document.getElementById("ans").innerHTML = "i am fine too, how are u doing";
+    }
+    document.getElementById("question").value = " ";
+    }
+</script>
 </body>
 </html>
