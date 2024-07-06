@@ -26,6 +26,8 @@
             height: 500px;
             cursor: pointer;
             color: aqua;
+            border: 0 solid hsl(0, 10%, 10%);
+            
         }
         #question,button{
             position: fixed;
@@ -44,10 +46,10 @@
         }
     </style>
   
-    <h1>AI multi lingual chat</h1>
+    <h1>B-chat-T</h1>
     <div id="body">
     <textarea name="" id="ans" placeholder="HELLO I AM UR CHAT BOT" readonly ></textarea>
-    <input name="" id="question" placeholder="ask any question" ></input>
+    <input name="" id="question" placeholder="leave your message here" ></input>
     <button onclick="b()">send</button>
 </div>
 
@@ -58,14 +60,19 @@
         let a=document.getElementById("question").value;
         if(a=="hello"){
             
-           document.getElementById("ans").innerHTML = "how are u i am ur bot";
+           document.getElementById("ans").innerHTML = "how are u";
           
-        } if(a=="fine how about u"){
-            document.getElementById("ans").innerHTML = "i am well,what is you name";
-    }else{
+        } if(a=="i'm good"){
+            
+            document.getElementById("ans").innerHTML = "ok how can i help u?";
+            
+    }
+    
+    if(a!=="hello" && a!="i'm good"){
             window.location.href="https://www.google.com/search?q="+a;
+            
         }
-        
+    
     document.getElementById("question").value = "";
     }
 </script>
