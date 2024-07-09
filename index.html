@@ -14,8 +14,8 @@
         textarea,input{
             
             display: block;
-            width: 100%;
-            font-size: 30px;
+            width: 30%;
+            font-size: 20px;
             background-color: transparent;
             color: white;
         }
@@ -23,19 +23,42 @@
             padding-left: 20px;
             position: fixed;
             border-radius: 50px;
-            height: 500px;
+            height: 50px;
             cursor: pointer;
             color: aqua;
             border: 0 solid hsl(0, 10%, 10%);
             
         }
-        #question,button{
+        #message1{
+            padding-left: 20px;
+            position: fixed;
+            border-radius: 50px;
+            height: 50px;
+            top:1000px;
+            cursor: pointer;
+            color: aqua;
+            border: 0 solid hsl(0, 10%, 10%);
+        }
+        #question,#button{
             position: fixed;
             bottom: 0;
             height:100px;
+            visibility: hidden;
         }
-        button{
-            right: 0;
+     
+        #hello{
+            position: absolute;
+            bottom: 0px;
+            left: 40px;
+            padding: 10px;
+            display: inline-flex;
+        }
+        #hi{
+            position: absolute;
+            bottom: 0px;
+            left:0px;
+            padding: 10px;
+            display: inline-flex;
         }
         h1{
             text-align: center;
@@ -44,18 +67,39 @@
             background-color: white;
             color: black;
         }
+        #message{
+            float: right;
+            padding-left: 20px;
+            margin-top:90px;
+            border-radius: 90px;
+            height: 70px;
+            cursor: pointer;
+            color: red;
+            border: 0 solid hsl(0, 10%, 10%);
+            
+        }
     </style>
   
     <h1>B-chat-T</h1>
     <div id="body">
-    <textarea name="" id="ans" placeholder="HELLO I AM UR CHAT BOT" readonly ></textarea>
+    <textarea name="" id="ans" readonly ></textarea>
+    <textarea name="" id="message"  placeholder="HELLO I AM UR CHAT BOT" readonly></textarea>
+    <textarea name="" id="ans1" readonly ></textarea>
+    <textarea name="" id="message1"   readonly></textarea>
     <input name="" id="question" placeholder="leave your message here" ></input>
-    <button onclick="b()">send</button>
+    <footer>
+  <button id="hello" onclick="he()">Hello</button><button id="hi" onclick="hi()">HI</button>
+    <button onclick="b()" id="button">send</button></footer>
 </div>
 
 
 <script>
-    document.getElementById("ans").innerHTML="hello"
+
+    
+    function he(){
+        document.getElementById("message").innerHTML = "how are u";
+        document.getElementById("ans").innerHTML="hello"
+    }
        function b(){
         let a=document.getElementById("question").value;
         if(a=="hello"){
